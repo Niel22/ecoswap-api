@@ -22,3 +22,5 @@
 2025-03-11	16:42:59	1a8d11f5-dab9-4c9c-baa1-31db16f54753	POST	undefined	/api/auth/register
 2025-03-11	16:46:16	47717477-8313-4920-8450-917af3fd4a24	POST	undefined	/api/auth/register
 2025-03-11	16:46:23	c708dbe2-d2fb-4138-b007-2756060e2a8f	POST	undefined	/api/auth/login
+2025-03-11	17:52:49	89b5eb4f-7f6a-4322-af1d-9280cff3bfcd	GET	undefined	/api/test
+2025-03-11	17:52:49	45ab147a-4426-412d-9e80-ffc80a0f41c3	GET	undefined	/favicon.ico
