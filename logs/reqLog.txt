@@ -24,3 +24,9 @@
 2025-03-11	16:46:23	c708dbe2-d2fb-4138-b007-2756060e2a8f	POST	undefined	/api/auth/login
 2025-03-11	17:52:49	89b5eb4f-7f6a-4322-af1d-9280cff3bfcd	GET	undefined	/api/test
 2025-03-11	17:52:49	45ab147a-4426-412d-9e80-ffc80a0f41c3	GET	undefined	/favicon.ico
+2025-03-11	18:45:35	9ef22c2e-cde8-44aa-99eb-100abce6b8f7	POST	undefined	/api/auth/register
+2025-03-11	18:51:49	cdb55eb7-c698-41d9-863c-620575360806	POST	undefined	/api/auth/register
+2025-03-11	18:52:30	af98207a-eaba-4777-a2f0-322e0d52c845	POST	undefined	/api/auth/register
+2025-03-11	18:53:41	70ea647f-3a5f-4e9d-9fd2-bbaf9b654740	POST	undefined	/api/auth/register
+2025-03-11	18:54:01	3e37b5b2-ccba-47a1-95cc-b85a15c1afe7	POST	undefined	/api/auth/register
+2025-03-11	18:54:08	dc2939f5-9bb1-486d-8f2e-b9a2fdb84df5	POST	undefined	/api/auth/register
