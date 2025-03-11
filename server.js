@@ -1,5 +1,5 @@
-const app = require('./app');
-const db = require('./models/index');
+const app = require('./src/app');
+const db = require('./src/models/index');
 require('express-async-errors');
 
 
