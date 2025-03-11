@@ -13,14 +13,14 @@ module.exports.register = async function(req, res){
 }
 
 module.exports.login = async function(req, res){
-    const data = req.UserData;
-    const user = await models.User.findOne({where: {email: data.email}});
+    const {email, password} = req.UserData;
+    const user = await models.User.findOne({where: {email: email}});
 
-    if(user?.comparePassword(user.password))
+    if(await user?.comparePassword(password))
     {
         const token = await generateWebToken(user);
 
-        const data = {
+        const userData = {
             id: user.id,
             name: user.name,
             email: user.email,
@@ -29,7 +29,7 @@ module.exports.login = async function(req, res){
             token: token
         };
 
-        return success(res, user);
+        return success(res, userData);
     }
 
     return error(res, 'Invalid email or password');

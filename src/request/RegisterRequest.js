@@ -3,7 +3,7 @@ const { validationError } = require('../utils/ApiResponse');
 const models = require('../models');
 
 const schema = {
-    username: {
+    name: {
         type: 'string',
         optional: false,
         min: '1',
