@@ -70,8 +70,8 @@ async function updatePayment (transaction){
     {
         const transact_result = await models.Transaction.create({
             userId: user.id,
-            amount: Math.round(transaction.amount / 100),
-            status: transaction.status,
+            amount: transaction.transaction_amount / 100,
+            status: transaction.transaction_status,
             transactionRef: transaction.transaction_ref
         });
 
