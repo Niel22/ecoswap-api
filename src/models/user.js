@@ -11,7 +11,14 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+      this.hasOne(models.Wallet, {
+        foreignKey: 'userId',
+        as: 'wallet'
+      });
+      this.hasMany(models.Transaction, {
+        foreignKey: 'userId',
+        as: 'transaction'
+      });
     }
 
     async comparePassword(password)

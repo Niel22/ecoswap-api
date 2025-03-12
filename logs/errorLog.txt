@@ -8,3 +8,21 @@
 2025-03-12	01:03:17	f57d341e-e8de-40ea-a5f5-1932a735ef39	Error: connect ECONNREFUSED 108.157.78.64:443
 2025-03-12	01:18:14	b460ba7b-0cb9-4bc0-ae37-ce9e78185513	ReferenceError: crypto is not defined
 2025-03-12	01:19:58	8fe7bbd8-8701-47ae-bb66-23d4a9f5fcf8	ReferenceError: Cannot access 'paymentLink' before initialization
+2025-03-12	12:25:29	2981026d-c3f0-4a22-8338-ccdadf8484d4	Error: connect ETIMEDOUT 108.157.78.64:443
+2025-03-12	12:26:43	235120ae-1d42-4ee4-9460-3f6b3c3279e1	Error: connect ETIMEDOUT 108.157.78.64:443
+2025-03-12	12:34:09	196154e8-f588-485b-b363-3435fdd32a3e	Error: connect ECONNREFUSED 108.157.78.64:443
+2025-03-12	12:38:29	838298b6-9172-4d78-b138-3517717b61fe	Error: connect ECONNREFUSED 108.157.78.64:443
+2025-03-12	12:48:55	189e0c27-b81d-44e5-a034-b4fb0ce18c8c	Error: connect ECONNREFUSED 108.157.78.64:443
+2025-03-12	12:48:58	eb28e5da-bb63-41a4-a2ad-754fb06c1040	TypeError: this.updatePayment is not a function
+2025-03-12	12:49:09	c3f39c36-e617-4b60-a224-439c95ce1c26	TypeError: this.updatePayment is not a function
+2025-03-12	13:45:45	68135c2b-34ae-4b43-ac9d-332cb4814cb7	TypeError: Cannot read properties of undefined (reading 'id')
+2025-03-12	13:49:37	399ce0ee-d43a-43a5-ae4c-6714a470bf5d	AxiosError: Request failed with status code 400
+2025-03-12	13:49:40	35bff46f-308b-4e5b-9e0a-4719d19831bc	AxiosError: Request failed with status code 400
+2025-03-12	14:24:20	a640022f-ade3-498d-a50d-433706dbf487	TypeError: Cannot read properties of null (reading 'id')
+2025-03-12	14:31:01	429048e4-2471-40ee-8a9c-46024e6d2ea5	Error: route http://localhost:4000/api/wallet/wallet-balance does not exist
+2025-03-12	14:31:20	70a5683f-5efb-4d1c-b978-73ac29c50613	Error: route http://localhost:4000/api/profilw/wallet-balance does not exist
+2025-03-12	15:11:05	6750ef31-b157-4e66-bd4e-cf2ac6e19583	Error: connect ETIMEDOUT 108.157.78.64:443
+2025-03-12	15:20:38	152c8f81-cc06-4926-a8db-0373c94b33dd	Error: connect ETIMEDOUT 108.157.78.64:443
+2025-03-12	15:21:27	e5cdf51b-5cd9-4a3f-9271-7a944f333a84	SequelizeDatabaseError: invalid input syntax for type integer: "NaN"
+2025-03-12	15:26:51	0a9ea034-8372-4b63-9e16-911050b170dd	Error: connect ETIMEDOUT 108.157.78.64:443
+2025-03-12	15:27:20	bcb57380-d069-4090-aa73-fa947667b3a1	Error: connect ETIMEDOUT 108.157.78.64:443

@@ -15,12 +15,28 @@ async function authMiddleware(req, res, next) {
         return error(res, "invalid token. Authentication failed.");
       }
 
-      const user = await models.User.findByPk(decoded?.userId);
-        req.AuthUser = user;
+      const user = await models.User.findByPk(decoded?.userId, {include: [
+        {
+          model: models.Wallet,
+          as: "wallet"
+        }
+      ]});
 
-        // console.log(user);
+      if(user)
+      {
+        req.AuthUser = {
+            id: user.id,
+            name: user.name,
+            email: user.email,
+            role: user.is_admin ? 'admin' : 'user',
+            status: user.active ? 'enabled' : 'disabled',
+            balance: user.wallet.balance,
+            token: token
+        };
+        
         next();
         return;
+      }
     } catch (err) {
       return error(res, err.message);
     }
