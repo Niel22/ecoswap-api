@@ -22,10 +22,13 @@ module.exports = (sequelize, DataTypes) => {
   User.init({
     name: DataTypes.STRING,
     email: DataTypes.STRING,
-    gender: DataTypes.STRING,
     active: DataTypes.BOOLEAN,
-    role_id: DataTypes.INTEGER,
-    password: DataTypes.STRING
+    is_admin: DataTypes.BOOLEAN,
+    password: DataTypes.STRING,
+    address: DataTypes.STRING,
+    city: DataTypes.STRING,
+    state: DataTypes.STRING,
+    country: DataTypes.STRING,
   }, {
     sequelize,
     modelName: 'User',

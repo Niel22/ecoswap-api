@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/Niel22/ecoswap-api#readme",
   "dependencies": {
+    "axios": "^1.8.2",
     "bcryptjs": "^3.0.2",
     "body-parser": "^1.20.3",
     "cors": "^2.8.5",

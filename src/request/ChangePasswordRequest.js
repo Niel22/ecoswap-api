@@ -2,29 +2,29 @@ const Validator = require('fastest-validator');
 const { validationError } = require('../utils/ApiResponse');
 
 const schema = {
-    email: {
-        type: 'email',
+    old_password: {
+        type: "string",
         optional: false,
-        min: '1'
+        min: 8
     },
-    password: {
-        type: 'string',
+    new_password: {
+        type: "string",
         optional: false,
-        min: '8'
+        min: 8
     }
 }
 
-
 const rules = new Validator();
 
-async function LoginRequest(req, res, next)
+async function ChangePasswordRequest(req, res, next)
 {
-    const data = req.body
-
-    if(field = Object.entries(data).find(([KeyboardEvent, value]) => !value))
+    const data = req.body;
+    
+    if(field = Object.entries(data).find(([key, value]) => value === null || value === undefined || value === ""))
     {
         return validationError(res, `${field} cannot be empty`);
     }
+
 
     const validated = rules.validate(data, schema);
 
@@ -36,7 +36,6 @@ async function LoginRequest(req, res, next)
     req.UserData = data;
     next();
 
-
 }
 
-module.exports = LoginRequest;
+module.exports = ChangePasswordRequest;

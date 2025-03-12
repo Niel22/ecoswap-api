@@ -2,26 +2,19 @@ const Validator = require('fastest-validator');
 const { validationError } = require('../utils/ApiResponse');
 
 const schema = {
-    email: {
-        type: 'email',
+    amount: {
+        type: "number",
         optional: false,
-        min: '1'
-    },
-    password: {
-        type: 'string',
-        optional: false,
-        min: '8'
     }
 }
 
-
 const rules = new Validator();
 
-async function LoginRequest(req, res, next)
+async function FundWalletRequest(req, res, next)
 {
-    const data = req.body
+    const data = req.body;
 
-    if(field = Object.entries(data).find(([KeyboardEvent, value]) => !value))
+    if(field = Object.entries(data).find(([key, value]) => value === null || value === undefined || value === ""))
     {
         return validationError(res, `${field} cannot be empty`);
     }
@@ -33,10 +26,8 @@ async function LoginRequest(req, res, next)
         return validationError(res, validated);
     }
 
-    req.UserData = data;
+    req.FundData = data;
     next();
-
-
 }
 
-module.exports = LoginRequest;
+module.exports = FundWalletRequest;

@@ -3,3 +3,8 @@
 2025-03-11	13:34:03	7c852969-36a9-4c2f-989f-83d35095c3a0	Error: route http://localhost:4000/api/register does not exist
 2025-03-11	17:52:49	60bf42d0-42a3-482b-b493-c5ef0b71af41	Error: Cannot set headers after they are sent to the client
 2025-03-11	17:52:49	6bdcdd79-bd26-4d60-a0df-84e027d0aaf7	Error: route http://localhost:4000/favicon.ico does not exist
+2025-03-12	00:52:07	210324b7-4636-4ff0-9aba-e45b582ebda6	ReferenceError: error is not defined
+2025-03-12	00:52:56	7a38e5b0-1941-46ff-9cc0-544057ebfdd3	ReferenceError: validationError is not defined
+2025-03-12	01:03:17	f57d341e-e8de-40ea-a5f5-1932a735ef39	Error: connect ECONNREFUSED 108.157.78.64:443
+2025-03-12	01:18:14	b460ba7b-0cb9-4bc0-ae37-ce9e78185513	ReferenceError: crypto is not defined
+2025-03-12	01:19:58	8fe7bbd8-8701-47ae-bb66-23d4a9f5fcf8	ReferenceError: Cannot access 'paymentLink' before initialization

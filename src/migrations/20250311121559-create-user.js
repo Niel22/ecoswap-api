@@ -13,18 +13,30 @@ module.exports = {
         type: Sequelize.STRING
       },
       email: {
-        type: Sequelize.STRING
-      },
-      gender: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        unique: true
       },
       active: {
-        type: Sequelize.BOOLEAN
+        type: Sequelize.BOOLEAN,
+        defaultValue: true
       },
-      role_id: {
-        type: Sequelize.INTEGER
+      is_admin: {
+        type: Sequelize.BOOLEAN,
+        defaultValue: false
       },
       password: {
+        type: Sequelize.STRING
+      },
+      address: {
+        type: Sequelize.STRING
+      },
+      city: {
+        type: Sequelize.STRING
+      },
+      state: {
+        type: Sequelize.STRING
+      },
+      country: {
         type: Sequelize.STRING
       },
       createdAt: {

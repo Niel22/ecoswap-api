@@ -24,7 +24,7 @@ module.exports.login = async function(req, res){
             id: user.id,
             name: user.name,
             email: user.email,
-            role: user.role_id,
+            role: user.is_admin ? 'admin' : 'user',
             status: user.active ? 'enabled' : 'disabled',
             token: token
         };

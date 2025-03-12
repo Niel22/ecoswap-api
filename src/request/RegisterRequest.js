@@ -13,26 +13,35 @@ const schema = {
         optional: false,
         min: '1'
     },
-    gender: {
-        type: 'string',
-        optional: false,
-        min: '1'
-    },
-    active: {
-        type: 'boolean',
-        optional: false,
-        min: '1'
-    },
-    role_id: {
-        type: 'number',
-        optional: false,
-        min: '1'
-    },
     password: {
         type: 'string',
         optional: false,
         min: '1'
-    }
+    },
+    address: {
+        type: 'string',
+        optional: false,
+        max: '255',
+        min: '1',
+    },
+    city: {
+        type: 'string',
+        optional: false,
+        max: '100',
+        min: '1',
+    },
+    state: {
+        type: 'string',
+        optional: false,
+        max: '100',
+        min: '1',
+    },
+    country: {
+        type: 'string',
+        optional: false,
+        max: '100',
+        min: '1',
+    },
 }
 
 const rules = new Validator();
@@ -60,13 +69,6 @@ async function RegisterRequest(req, res, next)
     {
         return validationError(res, 'Email Already exist');
     }
-
-    // const role = await models.Role.findByPk(parseInt(data.role_id));
-
-    // if(!role)
-    // {
-    //     return validationError(res, 'Selected Role is not valid');
-    // }
 
 
     req.UserData = data;
