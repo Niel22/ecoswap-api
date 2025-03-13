@@ -3,6 +3,7 @@ const router = express.Router();
 const authRoute = require('./auth');
 const profileRoute = require('./profile');
 const walletRoute = require('./wallet');
+const transactionRoute = require('./transaction');
 const authMiddleware = require('../middleware/authMiddleware');
 const { redirect, webhook } = require('../controllers/WalletController');
 
@@ -19,5 +20,6 @@ router.use('/auth', authRoute);
 router.use(authMiddleware)
 router.use('/profile', profileRoute);
 router.use('/wallet', walletRoute);
+router.use('/transactions', transactionRoute);
 
 module.exports = router;

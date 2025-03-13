@@ -179,3 +179,6 @@
 2025-03-13	22:37:49	f1ecc8f1-049b-4244-858f-e65f43a2cb94	GET	undefined	/api/profile/wallet-balance
 2025-03-13	22:39:29	0cf82d64-f75b-4119-9313-67c1e1a5366f	GET	undefined	/api/wallet-verify?reference=ECOSWAP-ac6bde35
 2025-03-13	22:41:13	4d6a2b01-3d90-4940-92a9-0b4a0add2927	GET	undefined	/api/wallet-verify?reference=ECOSWAP-ac6bde35
+2025-03-14	00:05:29	60abaed9-626b-4b5e-ab45-da250ff0268e	GET	undefined	/api/transactions
+2025-03-14	00:05:42	098ea82e-7118-49b4-8dfd-47b57a18316b	GET	undefined	/api/transactions
+2025-03-14	00:06:18	943a293d-3546-4d66-9844-e4177e87576d	GET	undefined	/api/transactions
