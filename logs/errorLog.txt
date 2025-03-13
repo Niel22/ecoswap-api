@@ -35,3 +35,4 @@
 2025-03-13	22:27:24	907f9ebe-c5c6-498f-a435-08d917428413	Error: Cannot set headers after they are sent to the client
 2025-03-13	22:30:11	211d374c-d19f-4654-a1e0-5958f7403c3c	Error: Cannot set headers after they are sent to the client
 2025-03-13	22:41:39	5882ba79-1e42-44cf-9439-4b5d805af09f	SequelizeDatabaseError: column "description" does not exist
+2025-03-14	00:11:12	48207575-c0ad-4817-8f1e-4110b737f69d	Error: getaddrinfo ENOTFOUND sandbox-api-d.squadco.com

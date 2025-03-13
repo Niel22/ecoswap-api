@@ -4,7 +4,7 @@ const { success } = require('../utils/ApiResponse');
 
 module.exports.fetchAllTransaction = async function(req, res)
 {
-    const transactions = await models.Transaction.findAll({where: {userId: req.AuthUser.id}});
+    const transactions = await models.Transaction.findAll({where: {userId: req.AuthUser.id}, order: [['createdAt', 'DESC']],});
 
     if(transactions.length > 0)
     {

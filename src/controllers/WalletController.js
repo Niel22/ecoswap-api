@@ -18,7 +18,7 @@ module.exports.initPayment = async function(req, res)
         email: email, 
         currency: "NGN",
         initiate_type: "inline",
-        transaction_ref: reference,
+        transaction_ref: reference.toUpperCase(),
         callback_url: process.env.REDIRECT_URL, 
 
     };
