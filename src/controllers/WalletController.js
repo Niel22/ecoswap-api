@@ -58,6 +58,11 @@ module.exports.redirect = async function(req, res){
 
 }
 
+module.exports.webhook = async function(req, res)
+{
+    await updatePayment(req.body);
+}
+
 async function updatePayment (transaction){
     const user = await models.User.findOne({where: {email: transaction.email}});
     const wallet = await models.Wallet.findOne({where: {userId: user.id}});

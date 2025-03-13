@@ -12,6 +12,7 @@ router.get('/test', (req, res) => {
 });
 
 router.get('/wallet-verify', redirect);
+router.get('wallet-payment-verification', webhook);
 
 router.use('/auth', authRoute);
 
