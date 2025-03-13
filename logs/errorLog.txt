@@ -26,3 +26,12 @@
 2025-03-12	15:21:27	e5cdf51b-5cd9-4a3f-9271-7a944f333a84	SequelizeDatabaseError: invalid input syntax for type integer: "NaN"
 2025-03-12	15:26:51	0a9ea034-8372-4b63-9e16-911050b170dd	Error: connect ETIMEDOUT 108.157.78.64:443
 2025-03-12	15:27:20	bcb57380-d069-4090-aa73-fa947667b3a1	Error: connect ETIMEDOUT 108.157.78.64:443
+2025-03-13	20:08:51	06148d42-b789-49a9-8346-dfe7b1c745a8	Error: connect ETIMEDOUT 108.157.78.64:443
+2025-03-13	20:09:17	17201b2f-052a-43c0-8214-314f4bde1314	AxiosError: Request failed with status code 404
+2025-03-13	20:09:45	a0c84546-14ca-49c9-9b0c-5a237a0dd30b	AxiosError: Request failed with status code 404
+2025-03-13	20:11:59	daee58b8-8411-4d39-bc82-51c2f24cd707	AxiosError: Request failed with status code 400
+2025-03-13	22:25:23	512da40c-47cd-43c3-b147-84d328f92222	Error: getaddrinfo ENOTFOUND sandbox-api-d.squadco.com
+2025-03-13	22:25:39	1e26c479-8271-439f-b64e-7199fe9ecf35	Error: connect ETIMEDOUT 108.157.78.64:443
+2025-03-13	22:27:24	907f9ebe-c5c6-498f-a435-08d917428413	Error: Cannot set headers after they are sent to the client
+2025-03-13	22:30:11	211d374c-d19f-4654-a1e0-5958f7403c3c	Error: Cannot set headers after they are sent to the client
+2025-03-13	22:41:39	5882ba79-1e42-44cf-9439-4b5d805af09f	SequelizeDatabaseError: column "description" does not exist

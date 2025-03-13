@@ -25,7 +25,12 @@ module.exports = {
       },
       transactionRef: {
         type: Sequelize.STRING,
-        allowNull: false
+        allowNull: false,
+        unique: true
+      },
+      description: {
+        type: Sequelize.STRING,
+        allowNull:false,
       },
       status: {
         type: Sequelize.STRING,

@@ -21,6 +21,7 @@ module.exports = (sequelize, DataTypes) => {
     amount: DataTypes.INTEGER,
     status: DataTypes.STRING,
     transactionRef: DataTypes.STRING,
+    description: DataTypes.STRING,
   }, {
     sequelize,
     modelName: 'Transaction',

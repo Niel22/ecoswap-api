@@ -5,30 +5,21 @@ const models = require("../models");
 
 module.exports.initPayment = async function(req, res)
 {
-    const url = 'https://sandbox-api-d.squadco.com/payment_link/otp';
+    const url = 'https://sandbox-api-d.squadco.com/transaction/initiate';
     
-    const amount = req.FundData.amount;
     const secretKey = process.env.SQUAD_SECRET_KEY;
+    const amount = req.FundData.amount;
+    const email = req.AuthUser.email;
 
-    const hash = crypto.randomBytes(8).toString('hex');
-
-    const expireDate = new Date();
-    expireDate.setMinutes(expireDate.getMinutes() + 2);
-    const expireBy = expireDate.toISOString();
+    const reference = `ECOSWAP${crypto.randomBytes(4).toString('hex')}`;
 
     const payload = {
-        name: 'Wallet Funding',
-        hash: hash,
-        link_status: 1,
-        expire_by: expireBy,
-        amounts: [
-            {
-                amount: amount * 100,
-                currency_id: 'NGN',
-            },
-        ],
-        description: 'Payment for funding of ecocoin',
-        return_msg: 'Successful',
+        amount: amount * 100,
+        email: email, 
+        currency: "NGN",
+        initiate_type: "inline",
+        transaction_ref: reference,
+        callback_url: process.env.REDIRECT_URL, 
 
     };
 
@@ -38,9 +29,14 @@ module.exports.initPayment = async function(req, res)
     };
 
     const response = await axios.post(url, payload, { headers });
-    const paymentLink = `https://sandbox-pay.squadco.com/${payload.hash}`;
 
-    return success(res, paymentLink, "Created");
+    if(response?.data?.data)
+    {
+        const checkoutUrl = response.data.data.checkout_url;
+        return success(res, { checkoutUrl }, "Payment initialization successful");
+    }
+
+    return error(res, "Network error, try again later");
 }
 
 module.exports.redirect = async function(req, res){
@@ -65,14 +61,28 @@ module.exports.redirect = async function(req, res){
 async function updatePayment (transaction){
     const user = await models.User.findOne({where: {email: transaction.email}});
     const wallet = await models.Wallet.findOne({where: {userId: user.id}});
+    if(!wallet)
+    {
+        wallet = await models.Wallet.create({
+            userId: user.id
+        });
+    }
 
     if(user)
     {
+
+        const existingTransaction = await models.Transaction.findOne({where: {transactionRef: transaction.transaction_ref}});
+        if(existingTransaction)
+        {
+            return true;
+        }
+
         const transact_result = await models.Transaction.create({
             userId: user.id,
             amount: transaction.transaction_amount / 100,
             status: transaction.transaction_status,
-            transactionRef: transaction.transaction_ref
+            transactionRef: transaction.transaction_ref,
+            description: "wallet funding"
         });
 
         if(transact_result?.status === 'success')
