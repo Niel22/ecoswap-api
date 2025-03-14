@@ -39,3 +39,16 @@
 2025-03-14	00:37:56	0b5d47f4-0338-495e-bebb-fce255a68d65	ReferenceError: user is not defined
 2025-03-14	00:42:30	8459621e-5c76-458b-a930-a0e20212151d	Error: route http://localhost:4000/public/users/mock-image.jpeg does not exist
 2025-03-14	00:58:42	46e0f39f-14df-4b3e-9990-e5975d7c3bab	MulterError: Unexpected field
+2025-03-14	06:57:31	5760721a-62d1-4fa5-b76f-3584ee98bb49	TypeError: Cannot read properties of undefined (reading 'images')
+2025-03-14	07:02:09	df16b682-43fa-4194-89a7-a8bb369208cc	TypeError: Cannot read properties of undefined (reading 'images')
+2025-03-14	07:05:35	01b24746-636f-407a-8fe7-ffd685f84602	TypeError: Cannot read properties of undefined (reading 'images')
+2025-03-14	07:06:19	021240e6-c631-40ba-bbfd-bd5ca86545f2	TypeError: Cannot read properties of undefined (reading 'images')
+2025-03-14	07:15:19	bfde0922-f672-4300-930c-fd54af4aa4f7	SequelizeDatabaseError: relation "SwapPosts" does not exist
+2025-03-14	07:25:21	9e11c361-27b1-46fe-a366-3df79e96c542	TypeError: models.findAll is not a function
+2025-03-14	07:36:27	af4ad6ff-34a2-444b-b615-e319e32cb92f	SequelizeDatabaseError: column swapImage.swapId does not exist
+2025-03-14	07:40:27	8089229d-1af7-4116-9d53-e075a8748f05	TypeError: Cannot read properties of undefined (reading 'map')
+2025-03-14	07:41:14	77e9922c-c9b1-4974-8f07-d93d3bc2bb29	TypeError: Cannot read properties of undefined (reading 'map')
+2025-03-14	07:47:15	7cbc0037-4fb0-4d5c-b1f3-b7108f344eb1	Error: route http://localhost:4000/public/users/1741933607808.jpg does not exist
+2025-03-14	08:02:09	d211d03a-3b25-4251-8510-58ab13d89776	Error: WHERE parameter "id" has invalid "undefined" value
+2025-03-14	08:03:01	2d515c5f-38cd-4683-a428-12423eef842e	SequelizeDatabaseError: column "nan" does not exist
+2025-03-14	08:05:19	7a2e8da9-5477-426e-b8a5-875e2ce5c56e	TypeError: The "path" argument must be of type string. Received an instance of SwapPostImage

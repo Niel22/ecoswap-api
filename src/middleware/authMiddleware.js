@@ -31,6 +31,9 @@ async function authMiddleware(req, res, next) {
             image: user.image,
             role: user.is_admin ? 'admin' : 'user',
             status: user.active ? 'enabled' : 'disabled',
+            city: user.city,
+            state: user.state,
+            country: user.country,
             balance: user.wallet.balance,
             token: token
         };
