@@ -32,7 +32,7 @@ async function TransferFundRequest(req, res, next)
         return validationError(res, validated);
     }
 
-    const existingEmail = await models.Users.findOne({where: {email: data.email}});
+    const existingEmail = await models.User.findOne({where: {email: data.email}});
 
     if(!existingEmail)
     {

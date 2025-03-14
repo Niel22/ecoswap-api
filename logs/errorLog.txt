@@ -62,3 +62,5 @@
 2025-03-14	11:34:28	d7ab0366-9a27-4593-9ad3-6efdcd4479a6	TypeError: Cannot read properties of null (reading 'id')
 2025-03-14	12:41:16	a428e02c-9897-4c4d-a7b5-dcd9af92da65	ReferenceError: crypto is not defined
 2025-03-14	19:22:24	eb3599bb-7c1f-44a4-95f2-f625d9b4c3f4	TypeError: Cannot read properties of undefined (reading 'findOne')
+2025-03-14	19:28:19	e84ddb4a-406d-47b8-a937-ae99dd61a536	TypeError: Cannot read properties of undefined (reading 'findOne')
+2025-03-14	19:30:24	d3ff5bcc-53c7-479d-82b3-a7891e9cfbb8	TypeError: Cannot read properties of undefined (reading 'findOne')

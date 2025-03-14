@@ -306,3 +306,6 @@
 2025-03-14	12:43:27	0ed85bf1-6bce-4727-83e8-dca7f677a68b	DELETE	undefined	/api/swapPosts/1
 2025-03-14	18:27:30	76adb95e-3aad-4a8b-a3d8-52787acb113a	GET	undefined	/api/swapPosts/country-swap
 2025-03-14	19:22:18	662727fc-821f-42f6-88c1-5312a0995be0	POST	undefined	/api/wallet/transfer-funds
+2025-03-14	19:28:12	680f4519-9bb1-4c3b-bc1c-a89924a8292d	POST	undefined	/api/wallet/transfer-funds
+2025-03-14	19:30:17	03104147-c3d8-403b-8e38-5f6ad11e180c	POST	undefined	/api/wallet/transfer-funds
+2025-03-14	19:31:04	4436e1ba-7bf1-4017-8fc5-27526586f330	POST	undefined	/api/wallet/transfer-funds
