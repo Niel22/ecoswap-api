@@ -7,6 +7,7 @@ module.exports.ProfileResource = function(data){
         email: data.email,
         phone: data.phone,
         image: url(data.image),
+        balance: data.balance,
         active: data.active ? "true" : "false",
         user_type: data.is_admin ? "admin" : "user",
         address: data.address,
