@@ -33,6 +33,7 @@ module.exports.login = async function(req, res){
             id: user.id,
             name: user.name,
             email: user.email,
+            phone: user.phone,
             image: url(user.image),
             role: user.is_admin ? 'admin' : 'user',
             status: user.active ? 'enabled' : 'disabled',

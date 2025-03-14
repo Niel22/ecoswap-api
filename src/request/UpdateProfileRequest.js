@@ -8,6 +8,10 @@ const schema = {
         type: 'string',
         optional: true,
     },
+    phone: {
+        type: 'string',
+        optional: true,
+    },
     address: {
         type: 'string',
         optional: true,
