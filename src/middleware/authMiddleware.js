@@ -28,6 +28,7 @@ async function authMiddleware(req, res, next) {
             id: user.id,
             name: user.name,
             email: user.email,
+            image: user.image,
             role: user.is_admin ? 'admin' : 'user',
             status: user.active ? 'enabled' : 'disabled',
             balance: user.wallet.balance,

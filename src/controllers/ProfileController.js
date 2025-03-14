@@ -45,3 +45,23 @@ module.exports.fetchWalletBalance = async function(req, res)
 
   return error(res, "This user does not have a wallet");
 }
+
+module.exports.uploadImage = async function(req, res)
+{
+  const user = await models.User.findByPk(req.AuthUser.id);
+
+  if(user)
+  {
+    const upload = await user.update({
+      image: `public/users/${req.file.filename}`
+    });
+
+    if(upload)
+    {
+      return success(res, {}, "Profile Picture Uploaded");
+    }
+
+  }
+
+  return error(res, "Problem uploading picture. Ensure the user exist");
+}

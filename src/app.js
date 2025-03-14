@@ -8,12 +8,14 @@ const cors = require('cors');
 const corsOptions = require('./utils/corsOptions');
 const { logger } = require('./utils/logEvents');
 const { notFound, errorHandler } = require('./utils/errorHandler');
+const path = require('path');
 
 
 app.use(cors(corsOptions));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use('/public', express.static(path.join(__dirname, '../public')));
 
 // Route Handler
 app.use(logger);

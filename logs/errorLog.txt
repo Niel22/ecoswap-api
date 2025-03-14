@@ -36,3 +36,6 @@
 2025-03-13	22:30:11	211d374c-d19f-4654-a1e0-5958f7403c3c	Error: Cannot set headers after they are sent to the client
 2025-03-13	22:41:39	5882ba79-1e42-44cf-9439-4b5d805af09f	SequelizeDatabaseError: column "description" does not exist
 2025-03-14	00:11:12	48207575-c0ad-4817-8f1e-4110b737f69d	Error: getaddrinfo ENOTFOUND sandbox-api-d.squadco.com
+2025-03-14	00:37:56	0b5d47f4-0338-495e-bebb-fce255a68d65	ReferenceError: user is not defined
+2025-03-14	00:42:30	8459621e-5c76-458b-a930-a0e20212151d	Error: route http://localhost:4000/public/users/mock-image.jpeg does not exist
+2025-03-14	00:58:42	46e0f39f-14df-4b3e-9990-e5975d7c3bab	MulterError: Unexpected field
