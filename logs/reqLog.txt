@@ -304,3 +304,4 @@
 2025-03-14	12:42:22	214c15f3-ec60-4b45-a9f3-0c6f72899903	GET	undefined	/api/swapPosts/city-swap
 2025-03-14	12:42:46	f46e9c53-80fb-4e04-b5d4-66a21c645828	GET	undefined	/api/swapPosts/country-swap
 2025-03-14	12:43:27	0ed85bf1-6bce-4727-83e8-dca7f677a68b	DELETE	undefined	/api/swapPosts/1
+2025-03-14	18:27:30	76adb95e-3aad-4a8b-a3d8-52787acb113a	GET	undefined	/api/swapPosts/country-swap

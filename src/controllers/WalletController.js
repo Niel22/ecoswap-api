@@ -13,6 +13,9 @@ module.exports.transferFund = async function(req, res)
     const senderReference = `ECOSWAP${crypto.randomBytes(4).toString("hex")}`;
     const recieverReference = `ECOSWAP${crypto.randomBytes(4).toString("hex")}`;
 
+    if(senderWallet?.balance > req.TransferData.amount){
+
+    
     if(recieverWallet)
     {
       await senderWallet.update({
@@ -68,6 +71,8 @@ module.exports.transferFund = async function(req, res)
     });
 
     return success(res, {}, "Transfer Succesful");
+  }
+  return error(res, "Insufficient funds");
 }
 
 module.exports.initPayment = async function (req, res) {
