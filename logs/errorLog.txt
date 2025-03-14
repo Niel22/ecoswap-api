@@ -59,3 +59,4 @@
 2025-03-14	11:15:07	0da7c98a-7a67-44bb-84fe-2a487c6953c7	Error: Cannot set headers after they are sent to the client
 2025-03-14	11:17:23	c16ffa6c-e419-41ae-ae77-6149a0b92f54	Error: Cannot set headers after they are sent to the client
 2025-03-14	11:18:40	50f61f5f-3bcf-4e3b-b213-91d17086c947	Error: Cannot set headers after they are sent to the client
+2025-03-14	11:34:28	d7ab0366-9a27-4593-9ad3-6efdcd4479a6	TypeError: Cannot read properties of null (reading 'id')

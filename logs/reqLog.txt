@@ -282,3 +282,7 @@
 2025-03-14	11:18:36	c291df9c-e34a-4040-b917-c879d949d093	GET	undefined	/api/profile/wallet-balance
 2025-03-14	11:20:24	685bbb99-a191-4c1b-8d5c-26f8438b65ed	GET	undefined	/api/wallet-verify?reference=ECOSWAP9F96059C
 2025-03-14	11:20:45	6f2eca59-1d87-4c43-91c1-3b0567d60f6b	GET	undefined	/api/profile/wallet-balance
+2025-03-14	11:34:16	b3769396-a9d3-4d46-b23f-18ccb8b3b7d6	POST	undefined	/api/wallet-payment-verification
+2025-03-14	11:35:44	823079e5-389c-4ac0-a6ad-35667b443c3b	POST	undefined	/api/wallet-payment-verification
+2025-03-14	11:37:47	698e1db7-7180-4c00-8d77-751fb3cee31c	POST	undefined	/api/wallet-payment-verification
+2025-03-14	11:38:35	c38ef421-b978-4d24-a133-16345fe86104	POST	undefined	/api/wallet-payment-verification

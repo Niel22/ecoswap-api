@@ -1,8 +1,7 @@
 const axios = require("axios");
-const { success } = require("../utils/ApiResponse");
+const { success, error } = require("../utils/ApiResponse");
 const crypto = require("crypto");
 const models = require("../models");
-const { error } = require("console");
 
 module.exports.initPayment = async function (req, res) {
   const url = "https://sandbox-api-d.squadco.com/transaction/initiate";
@@ -73,21 +72,27 @@ module.exports.webhook = async function (req, res) {
       return success(res, {}, "Payment Successfull");
     }
 
-    return error(res, "User does not exist");
+    return error(res, "User or Transaction does not exist");
 };
 
 async function updatePayment(transaction) {
   const user = await models.User.findOne({
     where: { email: transaction.email },
   });
+
+  if (!user) {
+    return false;
+  }
+
   let wallet = await models.Wallet.findOne({ where: { userId: user.id } });
+
   if (!wallet) {
     wallet = await models.Wallet.create({
       userId: user.id,
     });
   }
 
-  if (user) {
+  
     const existingTransaction = await models.Transaction.findOne({
       where: { transactionRef: transaction.transaction_ref },
     });
@@ -104,9 +109,6 @@ async function updatePayment(transaction) {
         return true;
       }
       return true;
-    }
-
-    return true;
   }
   return false;
 }
