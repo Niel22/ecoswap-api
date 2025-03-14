@@ -5,7 +5,7 @@ const profileRoute = require('./profile');
 const walletRoute = require('./wallet');
 const transactionRoute = require('./transaction');
 const swapPostRoute = require('./swapPost');
-const userRoute = require('./user');
+const userRoute = require('./users');
 const authMiddleware = require('../middleware/authMiddleware');
 const { redirect, webhook } = require('../controllers/WalletController');
 
