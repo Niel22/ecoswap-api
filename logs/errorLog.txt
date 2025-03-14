@@ -64,3 +64,6 @@
 2025-03-14	19:22:24	eb3599bb-7c1f-44a4-95f2-f625d9b4c3f4	TypeError: Cannot read properties of undefined (reading 'findOne')
 2025-03-14	19:28:19	e84ddb4a-406d-47b8-a937-ae99dd61a536	TypeError: Cannot read properties of undefined (reading 'findOne')
 2025-03-14	19:30:24	d3ff5bcc-53c7-479d-82b3-a7891e9cfbb8	TypeError: Cannot read properties of undefined (reading 'findOne')
+2025-03-14	19:53:57	cbd4064e-6562-4932-9449-27f010dd537c	TypeError: Cannot read properties of undefined (reading 'map')
+2025-03-14	19:54:45	e94eafa5-1774-4592-866b-a8007e5f913d	TypeError: Cannot read properties of undefined (reading 'map')
+2025-03-14	19:55:39	847ab8a9-9ab4-435c-810b-f9c135008653	Error: route http://localhost:4000/api/swapPosts/ does not exist

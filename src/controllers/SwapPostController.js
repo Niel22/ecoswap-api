@@ -129,6 +129,33 @@ module.exports.fetchSwapInYourCountry = async function(req, res)
     return error(res, "No Swap found");
 }
 
+module.exports.fetchSingle = async function(req, res)
+{
+    const swap = await models.SwapPost.findByPk(req.params.id, {include: [
+        {
+            model: models.SwapPostImage,
+            as: "swapImage",
+        }
+    ]});
+
+    if(swap)
+    {
+        return success(res, {
+            id: swap.id,
+            title: swap.title,
+            description: swap.description,
+            swap_preference: swap.swap_preference,
+            city: swap.city,
+            state: swap.state,
+            country: swap.country,
+            createdAt: swap.createdAt,
+            swapImages: (swap.swapImage).map((image) => url(image.image)),
+        }, "Single Swap");
+    }
+
+    return error(res, "Swap Not Found");
+}
+
 module.exports.deleteSwapPost = async function(req, res)
 {
     const swap = await models.SwapPost.findByPk(req.params.id);

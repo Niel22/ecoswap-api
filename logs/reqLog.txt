@@ -309,3 +309,9 @@
 2025-03-14	19:28:12	680f4519-9bb1-4c3b-bc1c-a89924a8292d	POST	undefined	/api/wallet/transfer-funds
 2025-03-14	19:30:17	03104147-c3d8-403b-8e38-5f6ad11e180c	POST	undefined	/api/wallet/transfer-funds
 2025-03-14	19:31:04	4436e1ba-7bf1-4017-8fc5-27526586f330	POST	undefined	/api/wallet/transfer-funds
+2025-03-14	19:53:43	59ec7d84-41a7-46b4-a085-4b492e88d09e	GET	undefined	/api/swapPosts/1
+2025-03-14	19:53:51	2501553f-3802-48ba-aee0-806cc3f6fa2d	GET	undefined	/api/swapPosts/1
+2025-03-14	19:54:38	3df7e08a-7638-4b82-843c-87e23b7bd2cc	GET	undefined	/api/swapPosts/1
+2025-03-14	19:55:26	bd9ff84b-4b45-4fa8-a0c4-7553c8899270	GET	undefined	/api/swapPosts/1
+2025-03-14	19:55:39	05d29d34-c630-438a-bc96-09fde85c2377	GET	undefined	/api/swapPosts/
+2025-03-14	19:55:44	7e730689-8a7e-4498-9fe7-c5f9902750a4	GET	undefined	/api/swapPosts/2
