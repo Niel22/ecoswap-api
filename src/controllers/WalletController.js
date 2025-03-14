@@ -3,6 +3,73 @@ const { success, error } = require("../utils/ApiResponse");
 const crypto = require("crypto");
 const models = require("../models");
 
+module.exports.transferFund = async function(req, res)
+{
+  const sender = await models.Users.findOne({where: {email: req.AuthUser.email}});
+  const reciever = await models.Users.findOne({where: {email: req.TransferData.email}});
+
+    const senderWallet = await models.Wallet.findOne({where: {userId: sender.id}});
+    const recieverWallet = await models.Wallet.findOne({where: {userId: reciever.id}});
+    const senderReference = `ECOSWAP${crypto.randomBytes(4).toString("hex")}`;
+    const recieverReference = `ECOSWAP${crypto.randomBytes(4).toString("hex")}`;
+
+    if(recieverWallet)
+    {
+      await senderWallet.update({
+        balance: senderWallet.balance - req.TransferData.amount
+      });
+
+      await models.Transaction.create({
+        userId: sender.id,
+        amount: req.TransferData.amount,
+        status: "Success",
+        transactionRef: senderReference.toUpperCase(),
+        description: "Transfer Funds",
+      });
+
+      await recieverWallet.update({
+        balance: recieverWallet.balance + req.TransferData.amount
+      });
+
+      await models.Transaction.create({
+        userId: reciever.id,
+        amount: req.TransferData.amount,
+        status: "Success",
+        transactionRef: recieverReference.toUpperCase(),
+        description: "Recieved Funds",
+      });
+
+      return success(res, {}, "Transfer Succesful");
+    }
+
+    await senderWallet.update({
+      balance: senderWallet.balance - req.TransferData.amount
+    });
+
+    await models.Transaction.create({
+      userId: sender.id,
+      amount: req.TransferData.amount,
+      status: "Success",
+      transactionRef: senderReference.toUpperCase(),
+      description: "Transfer Funds",
+    });
+
+    await models.Wallet.create({
+      userId: reciever.id,
+      balance: recieverWallet.balance + req.TransferData.amount
+    });
+
+    await models.Transaction.create({
+      userId: reciever.id,
+      amount: req.TransferData.amount,
+      status: "Success",
+      transactionRef: recieverReference.toUpperCase(),
+      description: "Recieved Funds",
+    });
+
+    return success(res, {}, "Transfer Succesful");
+}
+
 module.exports.initPayment = async function (req, res) {
   const url = "https://sandbox-api-d.squadco.com/transaction/initiate";
 
