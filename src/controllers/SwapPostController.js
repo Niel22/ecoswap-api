@@ -2,6 +2,7 @@ const { Op } = require("sequelize");
 const models = require("../models");
 const { success, error } = require("../utils/ApiResponse");
 const { url } = require("../utils/helpers");
+const crypto = require('crypto');
 const imageRemover = require("../utils/imageRemover");
 
 module.exports.create = async function (req, res) {
