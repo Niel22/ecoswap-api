@@ -13,10 +13,16 @@ const schema = {
         optional: false,
         min: '1'
     },
+    phone: {
+        type: 'string',
+        optional: false,
+        min: '11',
+        max: '11'
+    },
     password: {
         type: 'string',
         optional: false,
-        min: '1'
+        min: '8',
     },
     address: {
         type: 'string',

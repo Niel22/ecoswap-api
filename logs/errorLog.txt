@@ -52,3 +52,10 @@
 2025-03-14	08:02:09	d211d03a-3b25-4251-8510-58ab13d89776	Error: WHERE parameter "id" has invalid "undefined" value
 2025-03-14	08:03:01	2d515c5f-38cd-4683-a428-12423eef842e	SequelizeDatabaseError: column "nan" does not exist
 2025-03-14	08:05:19	7a2e8da9-5477-426e-b8a5-875e2ce5c56e	TypeError: The "path" argument must be of type string. Received an instance of SwapPostImage
+2025-03-14	10:33:59	caed32d4-aead-4591-ace1-878db26565b8	Error: WHERE parameter "email" has invalid "undefined" value
+2025-03-14	10:34:28	89ed2339-6d11-40e3-ba28-5008f3d2f0be	TypeError: Cannot read properties of undefined (reading 'email')
+2025-03-14	10:58:03	5f8df204-c4af-4ecd-8eee-5d762a311cf9	ReferenceError: res is not defined
+2025-03-14	11:13:50	6b85fdc9-0a7d-4fc4-b765-791f7d82b59e	Error: connect ECONNREFUSED 108.157.78.64:443
+2025-03-14	11:15:07	0da7c98a-7a67-44bb-84fe-2a487c6953c7	Error: Cannot set headers after they are sent to the client
+2025-03-14	11:17:23	c16ffa6c-e419-41ae-ae77-6149a0b92f54	Error: Cannot set headers after they are sent to the client
+2025-03-14	11:18:40	50f61f5f-3bcf-4e3b-b213-91d17086c947	Error: Cannot set headers after they are sent to the client

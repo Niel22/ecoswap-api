@@ -16,6 +16,9 @@ module.exports = {
         type: Sequelize.STRING,
         unique: true
       },
+      phone: {
+        type: Sequelize.STRING,
+      },
       active: {
         type: Sequelize.BOOLEAN,
         defaultValue: true
