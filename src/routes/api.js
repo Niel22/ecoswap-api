@@ -5,6 +5,7 @@ const profileRoute = require('./profile');
 const walletRoute = require('./wallet');
 const transactionRoute = require('./transaction');
 const swapPostRoute = require('./swapPost');
+const userRoute = require('./user');
 const authMiddleware = require('../middleware/authMiddleware');
 const { redirect, webhook } = require('../controllers/WalletController');
 
@@ -23,5 +24,6 @@ router.use('/profile', profileRoute);
 router.use('/wallet', walletRoute);
 router.use('/transactions', transactionRoute);
 router.use('/swapPosts', swapPostRoute);
+router.use('/users', userRoute);
 
 module.exports = router;
