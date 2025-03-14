@@ -6,6 +6,7 @@ const imageRemover = require("../utils/imageRemover");
 
 module.exports.create = async function (req, res) {
   const swap = await models.SwapPost.create(req.SwapData);
+  const reference = `ECOSWAP${crypto.randomBytes(4).toString('hex')}`
 
   if (swap) {
     await Promise.all(
@@ -23,7 +24,16 @@ module.exports.create = async function (req, res) {
         await wallet.update({
             balance: wallet.balance - 200
         });
-        
+
+
+        await models.Transaction.create({
+            userId: req.AuthUser.id,
+            amount: 200,
+            status: "success",
+            transactionRef: reference,
+            description: "charge for swap post"
+        });
+
         return success(res, {}, "swap Posted Successfully");
     }
 

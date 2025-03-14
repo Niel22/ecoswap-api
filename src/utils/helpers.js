@@ -7,7 +7,6 @@ function serveStaticFile(app) {
     app.use('/uploads', express.static(directory));
 }
 
-// Function to resolve file path to domain url for static files
 function url(path)
 {
     if(process.env.NODE_ENV === 'development')
