@@ -5,6 +5,7 @@ module.exports.ProfileResource = function(data){
         id: data.id,
         name: data.name,
         email: data.email,
+        phone: data.phone,
         image: url(data.image),
         active: data.active ? "true" : "false",
         user_type: data.is_admin ? "admin" : "user",
