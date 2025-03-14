@@ -169,7 +169,7 @@ async function updatePayment(transaction) {
         status: transaction.transaction_status,
       });
 
-      if (transaction.transaction_status === "Success") {
+      if (transaction.transaction_status === "Success" || transaction.transaction_status === "success") {
         await wallet.update({
           balance: wallet.balance + transact_result.amount,
         });
