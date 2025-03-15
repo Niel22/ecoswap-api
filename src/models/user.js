@@ -25,6 +25,11 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: 'userId',
         as: 'swapPost'
       });
+
+      this.hasMany(models.SwapComment, {
+        foreignKey: 'userId',
+        as: 'swapComment'
+      });
     }
 
     async comparePassword(password)

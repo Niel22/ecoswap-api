@@ -15,9 +15,14 @@ module.exports = (sequelize, DataTypes) => {
         as: "swapPost"
       });
 
-      this.belongsTo(models.SwapCommentImage, {
+      this.hasMany(models.SwapCommentImage, {
         foreignKey: "commentId",
         as: "swapCommentImage"
+      });
+
+      this.belongsTo(models.User, {
+        foreignKey: "userId",
+        as: 'user'
       });
     }
   }

@@ -69,7 +69,7 @@ module.exports.fetchSwapInYourCity = async function(req, res)
             state: swap.state,
             country: swap.country,
             poster_name: swap.poster.name,
-            poster_picture: swap.poster.image,
+            poster_picture: url(swap.poster.image),
             createdAt: swap.createdAt,
             swapImages: (swap.swapImage).map((image) => url(image.image)),
         }));
@@ -103,7 +103,7 @@ module.exports.fetchSwapInYourState = async function(req, res)
                 state: swap.state,
                 country: swap.country,
                 poster_name: swap.poster.name,
-                poster_picture: swap.poster.image,
+                poster_picture: url(swap.poster.image),
                 createdAt: swap.createdAt,
                 swapImages: (swap.swapImage).map((image) => url(image.image)),
             }));
@@ -137,7 +137,7 @@ module.exports.fetchSwapInYourCountry = async function(req, res)
             state: swap.state,
             country: swap.country,
             poster_name: swap.poster.name,
-            poster_picture: swap.poster.image,
+            poster_picture: url(swap.poster.image),
             createdAt: swap.createdAt,
             swapImages: (swap.swapImage).map((image) => url(image.image)),
         }));
@@ -171,7 +171,7 @@ module.exports.fetchSingle = async function(req, res)
             state: swap.state,
             country: swap.country,
             poster_name: swap.poster.name,
-            poster_picture: swap.poster.image,
+            poster_picture: url(swap.poster.image),
             createdAt: swap.createdAt,
             swapImages: (swap.swapImage).map((image) => url(image.image)),
         }, "Single Swap");

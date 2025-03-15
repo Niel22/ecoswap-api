@@ -83,3 +83,24 @@
 2025-03-15	06:20:41	cc4f0676-36fa-47db-a58b-29e2dd6001f9	SequelizeDatabaseError: operator does not exist: character varying = integer
 2025-03-15	06:22:41	0ec9d69b-b34d-47b3-a45f-2774a87ea16c	SequelizeDatabaseError: operator does not exist: character varying = integer
 2025-03-15	06:23:37	6ff9ee7a-e238-4a30-b585-aa922fe48270	SequelizeDatabaseError: operator does not exist: character varying = integer
+2025-03-15	06:32:06	e0fedb5f-1cac-45b8-aab9-09b3cd06b8f2	SequelizeDatabaseError: operator does not exist: character varying = integer
+2025-03-15	06:32:09	c5fecb81-30e1-4436-921c-e04e36662fca	SequelizeDatabaseError: operator does not exist: character varying = integer
+2025-03-15	06:33:44	3916bcf0-caa2-4393-9daf-76df6a2e470c	SequelizeDatabaseError: operator does not exist: character varying = integer
+2025-03-15	06:34:18	6f5117a0-bda3-4bff-aeb8-6bed2a0a5b78	SequelizeDatabaseError: operator does not exist: character varying = integer
+2025-03-15	06:34:50	1657eb87-52da-4322-b32d-dae4a7ce33a5	SequelizeDatabaseError: operator does not exist: character varying = integer
+2025-03-15	06:35:25	7c7ff0ad-8cf4-4eac-ae80-ce2b88bfdde1	SequelizeEagerLoadingError: User is not associated to SwapPost!
+2025-03-15	06:36:15	945ec9f3-87e4-4284-a3e4-c07d7dace18c	SequelizeDatabaseError: operator does not exist: character varying = integer
+2025-03-15	06:40:24	a111b86f-ccb9-4f56-959b-58a208b13b33	MulterError: Unexpected field
+2025-03-15	06:40:41	743c0638-464e-4404-a0b6-53cec6fd537a	ReferenceError: imageRemover is not defined
+2025-03-15	06:42:06	2144e6b8-5761-4f8e-b8db-a6334500e46f	SequelizeDatabaseError: column "commentId" does not exist
+2025-03-15	06:44:41	0a2020db-6e83-48c4-9494-ab8ce34b9419	SequelizeDatabaseError: column "commentId" does not exist
+2025-03-15	06:47:32	34a11d49-81e6-4a7a-98bc-d4f9dd977cf0	SequelizeDatabaseError: column "commentId" does not exist
+2025-03-15	06:48:44	20baa5d1-7b31-4306-9a8a-70f0b9b865c2	ReferenceError: swap is not defined
+2025-03-15	06:59:22	1cafcc8e-df06-4730-b90a-e5bd309837fa	TypeError: comments.map is not a function
+2025-03-15	07:00:37	e15e08dd-f62b-46fa-aafb-54be4940607d	TypeError: Cannot read properties of null (reading 'name')
+2025-03-15	07:01:22	d2da70de-97b9-4b0b-aa72-64ab369692a8	ReferenceError: url is not defined
+2025-03-15	07:01:44	1db0ab07-7a27-4743-9d89-d716d1bc1792	TypeError: Cannot read properties of null (reading 'image')
+2025-03-15	07:02:17	3e5205e0-b69a-47c0-a7cb-37b86433818b	TypeError: Cannot read properties of null (reading 'name')
+2025-03-15	07:07:43	cf0dc754-b160-4970-8d6a-e60a6a6cd1b3	Error: connect ETIMEDOUT 108.157.78.64:443
+2025-03-15	07:09:24	aadf1dad-a977-4195-88c6-53c15f97cbbe	Error: read ETIMEDOUT
+2025-03-15	07:10:35	1ba6d886-2279-4187-a5db-85b7300944d5	SequelizeConnectionAcquireTimeoutError: Operation timeout

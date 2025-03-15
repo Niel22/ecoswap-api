@@ -1,14 +1,15 @@
 const Validator = require('fastest-validator');
 const { validationError } = require('../utils/ApiResponse');
 const models = require('../models');
+const imageRemover = require('../utils/imageRemover');
 
 const schema = {
     postId: {
-        type: "number",
+        type: "string",
         optional: false,
     },
     parentId: {
-        type: "number",
+        type: "string",
         optional: true
     },
     comment: {
@@ -41,7 +42,7 @@ async function SwapCommentRequest(req, res, next)
         return validationError(res, validated);
     }
 
-    const post = await models.SwapPost.findByPk(data.postId);
+    const post = await models.SwapPost.findByPk(parseInt(data.postId));
     if(!post)
     {
         req.files?.forEach((image) => {
@@ -52,7 +53,7 @@ async function SwapCommentRequest(req, res, next)
 
     if(data.parentId)
     {
-        const comment = await models.SwapComment.findByPk(data.parentId);
+        const comment = await models.SwapComment.findByPk(parseInt(data.parentId));
         if(!comment)
         {
             return validationError(res, "The selected parent comment does not exist");
@@ -60,6 +61,7 @@ async function SwapCommentRequest(req, res, next)
     }
 
     req.CommentData = data;
+    req.CommentData.userId = req.AuthUser.id;
     next();
 }
 
