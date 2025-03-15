@@ -394,3 +394,11 @@
 2025-03-15	07:11:13	de985705-c27b-409d-b65b-f6cf1df0b427	POST	undefined	/api/swapPosts
 2025-03-15	07:11:22	57f33237-a0fe-4853-918b-a115e904fd44	POST	undefined	/api/swapComments
 2025-03-15	07:11:30	4e57eccb-a1fb-4313-ab9b-edd861cd443a	GET	undefined	/api/swapComments/1
+2025-03-15	07:25:19	d28c87d4-8271-46db-8a09-1df9cfb0f963	GET	undefined	/api/swapComments/1/comments
+2025-03-15	07:26:18	997697f2-3bc3-40fe-ad57-196df279bd18	GET	undefined	/api/swapComments/1/comments/1
+2025-03-15	07:28:34	5dc7e544-aa29-472c-89a2-9c9fc15256ba	GET	undefined	/api/swapComments/1/comments/1
+2025-03-15	07:29:15	5f453744-73a2-4caf-8207-8f981a4aba69	GET	undefined	/api/swapComments/1/comments/1
+2025-03-15	07:29:36	67aaf3cb-bd10-486c-afd5-360c426bc700	GET	undefined	/api/swapComments/1/comments/1
+2025-03-15	07:29:52	22536eea-2a9b-4a62-8525-3842b10313fc	POST	undefined	/api/swapComments
+2025-03-15	07:30:54	61ca3f5d-7f65-42e3-8e41-3285a60df8bd	GET	undefined	/api/swapComments/1/comments
+2025-03-15	07:31:12	88395ac8-92d5-4580-a85e-24744d7f6355	GET	undefined	/api/swapComments/1/comments/1

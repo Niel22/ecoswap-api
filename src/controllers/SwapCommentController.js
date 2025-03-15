@@ -1,5 +1,5 @@
 const models = require('../models');
-const { success } = require('../utils/ApiResponse');
+const { success, error } = require('../utils/ApiResponse');
 const { url } = require('../utils/helpers');
 
 module.exports.create = async function(req, res)
@@ -27,7 +27,7 @@ module.exports.create = async function(req, res)
 
 module.exports.fetchComments = async function(req, res)
 {
-    const comments = await models.SwapComment.findAll({where: {postId: req.params.postId}, include: [
+    const comments = await models.SwapComment.findAll({where: {postId: req.params.postId, parentId: null}, include: [
         {
             model: models.SwapCommentImage,
             as: "swapCommentImage"
@@ -38,20 +38,53 @@ module.exports.fetchComments = async function(req, res)
         }
     ]});
 
-    if(comments)
+    if(comments.length > 0)
     {
-        console.log(comments);
         const commentDetails = comments.map((comment) => ({
             id: comment.id,
             comment: comment.comment,
             user_name: comment.user.name,
             user_picture: url(comment.user.image),
             createdAt: comment.createdAt,
-            swapImages: (comment.swapCommentImage).map((image) => url(image.image)),
+            swapImages: comment.swapCommentImage
+            ? comment.swapCommentImage.map((image) => url(image.image))
+            : [],
         }));
 
         return success(res, commentDetails, "All Comment for this post");
     }
 
     return error(res, "No comment found");
+}
+
+module.exports.fetchReplies = async function(req, res)
+{
+    const comments = await models.SwapComment.findAll({where: {postId: req.params.postId, parentId: req.params.parentId}, include: [
+        {
+            model: models.SwapCommentImage,
+            as: "swapCommentImage"
+        },
+        {
+            model: models.User,
+            as: "user"
+        }
+    ]});
+
+    if(comments.length > 0)
+        {
+            const commentDetails = comments.map((comment) => ({
+                id: comment.id,
+                comment: comment.comment,
+                user_name: comment.user.name,
+                user_picture: url(comment.user.image),
+                createdAt: comment.createdAt,
+                swapImages: comment.swapCommentImage
+                ? comment.swapCommentImage.map((image) => url(image.image))
+                : [],
+            }));
+    
+            return success(res, commentDetails, "All Replies for this comment");
+        }
+    
+        return error(res, "No replies found");
 }

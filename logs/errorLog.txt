@@ -104,3 +104,6 @@
 2025-03-15	07:07:43	cf0dc754-b160-4970-8d6a-e60a6a6cd1b3	Error: connect ETIMEDOUT 108.157.78.64:443
 2025-03-15	07:09:24	aadf1dad-a977-4195-88c6-53c15f97cbbe	Error: read ETIMEDOUT
 2025-03-15	07:10:35	1ba6d886-2279-4187-a5db-85b7300944d5	SequelizeConnectionAcquireTimeoutError: Operation timeout
+2025-03-15	07:13:07	eb7fab70-7c97-4184-9682-2b1c6c519b60	Error: connect ETIMEDOUT 108.157.78.64:443
+2025-03-15	07:26:26	fc9c5c74-46d3-44d1-9b44-7f1733f6eef6	Error: WHERE parameter "parentId" has invalid "undefined" value
+2025-03-15	07:29:22	d9a17532-b518-4180-9ac1-084f665c2c32	ReferenceError: error is not defined
