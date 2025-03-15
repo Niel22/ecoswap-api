@@ -72,3 +72,6 @@
 2025-03-15	05:59:42	4c250b58-534a-4edb-808a-119bc5f1ba16	SequelizeEagerLoadingError: User is not associated to SwapPost!
 2025-03-15	06:00:24	7a6d2eed-32b1-4090-9985-904cdfe1a3ad	SequelizeDatabaseError: column SwapPost.userId does not exist
 2025-03-15	06:01:14	f3e02359-c849-4307-8b78-88a3e62703aa	SequelizeDatabaseError: column SwapPost.userId does not exist
+2025-03-15	06:08:36	0edce824-1ba2-4e24-9b2c-a17d7cad1f58	Error: connect ETIMEDOUT 108.157.78.64:443
+2025-03-15	06:09:25	6663387f-acc0-4e50-a01f-62da9237cb45	Error: getaddrinfo ENOTFOUND sandbox-api-d.squadco.com
+2025-03-15	06:13:48	229c8587-64bd-4e1b-8ca5-8a9e60239cd9	MulterError: Unexpected field
