@@ -27,7 +27,7 @@ module.exports.create = async function(req, res)
 
 module.exports.fetchComments = async function(req, res)
 {
-    const comments = await models.SwapComment.findAll({where: {postId: req.params.postId, parentId: null}, include: [
+    const comments = await models.SwapComment.findAll({where: {postId: req.params.postId, parentId: null}, order: [["createdAt", "DESC"]], include: [
         {
             model: models.SwapCommentImage,
             as: "swapCommentImage"
@@ -59,7 +59,7 @@ module.exports.fetchComments = async function(req, res)
 
 module.exports.fetchReplies = async function(req, res)
 {
-    const comments = await models.SwapComment.findAll({where: {postId: req.params.postId, parentId: req.params.parentId}, include: [
+    const comments = await models.SwapComment.findAll({where: {postId: req.params.postId, parentId: req.params.parentId}, order: [["createdAt", "DESC"]], include: [
         {
             model: models.SwapCommentImage,
             as: "swapCommentImage"

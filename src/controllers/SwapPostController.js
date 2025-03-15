@@ -81,7 +81,7 @@ module.exports.fetchSwapInYourCity = async function(req, res)
 
 module.exports.fetchSwapInYourState = async function(req, res)
 {
-    const swaps = await models.SwapPost.findAll({where: {state: {[Op.like]: `%${req.AuthUser.state}%`}}, include: [
+    const swaps = await models.SwapPost.findAll({where: {state: {[Op.like]: `%${req.AuthUser.state}%`}}, order: [["createdAt", "DESC"]], include: [
         {
             model: models.SwapPostImage,
             as: "swapImage",
@@ -115,7 +115,7 @@ module.exports.fetchSwapInYourState = async function(req, res)
 
 module.exports.fetchSwapInYourCountry = async function(req, res)
 {
-    const swaps = await models.SwapPost.findAll({where: {country: {[Op.like]: `%${req.AuthUser.country}%`}}, include: [
+    const swaps = await models.SwapPost.findAll({where: {country: {[Op.like]: `%${req.AuthUser.country}%`}}, order: [["createdAt", "DESC"]], include: [
         {
             model: models.SwapPostImage,
             as: "swapImage",

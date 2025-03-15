@@ -402,3 +402,5 @@
 2025-03-15	07:29:52	22536eea-2a9b-4a62-8525-3842b10313fc	POST	undefined	/api/swapComments
 2025-03-15	07:30:54	61ca3f5d-7f65-42e3-8e41-3285a60df8bd	GET	undefined	/api/swapComments/1/comments
 2025-03-15	07:31:12	88395ac8-92d5-4580-a85e-24744d7f6355	GET	undefined	/api/swapComments/1/comments/1
+2025-03-15	09:15:40	aec66c7d-ff3e-440d-aee8-310081a40497	POST	undefined	/api/swapComments
+2025-03-15	16:36:14	b14af1d3-b6b1-4d43-9146-d5d3825bf911	GET	undefined	/api/swapPosts/country-swap
