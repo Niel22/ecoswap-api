@@ -70,7 +70,6 @@ async function SwapPostRequest(req, res, next)
         return validationError(res, validated);
     }
 
-    data.userId = req.AuthUser.id;
     req.SwapData = data;
     req.SwapData.userId = req.AuthUser.id;
     next();

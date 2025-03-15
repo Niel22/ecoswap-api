@@ -75,3 +75,11 @@
 2025-03-15	06:08:36	0edce824-1ba2-4e24-9b2c-a17d7cad1f58	Error: connect ETIMEDOUT 108.157.78.64:443
 2025-03-15	06:09:25	6663387f-acc0-4e50-a01f-62da9237cb45	Error: getaddrinfo ENOTFOUND sandbox-api-d.squadco.com
 2025-03-15	06:13:48	229c8587-64bd-4e1b-8ca5-8a9e60239cd9	MulterError: Unexpected field
+2025-03-15	06:15:05	0b7adb79-09dd-49e2-a95a-a586fb66765a	SequelizeDatabaseError: operator does not exist: character varying = integer
+2025-03-15	06:17:07	cf129353-a5ad-4eb4-93a4-5ed79dc13038	SequelizeDatabaseError: operator does not exist: character varying = integer
+2025-03-15	06:17:35	dd9ae5a8-27ed-4e21-a616-86bba4ba69aa	SequelizeDatabaseError: operator does not exist: character varying = integer
+2025-03-15	06:18:12	7bc85536-a4c8-47cf-88de-779a26e1eb61	SequelizeDatabaseError: operator does not exist: character varying = integer
+2025-03-15	06:18:57	18a23b4a-8edd-4388-8885-9d161877a4e4	TypeError: Cannot read properties of undefined (reading 'name')
+2025-03-15	06:20:41	cc4f0676-36fa-47db-a58b-29e2dd6001f9	SequelizeDatabaseError: operator does not exist: character varying = integer
+2025-03-15	06:22:41	0ec9d69b-b34d-47b3-a45f-2774a87ea16c	SequelizeDatabaseError: operator does not exist: character varying = integer
+2025-03-15	06:23:37	6ff9ee7a-e238-4a30-b585-aa922fe48270	SequelizeDatabaseError: operator does not exist: character varying = integer

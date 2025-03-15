@@ -331,3 +331,13 @@
 2025-03-15	06:06:18	8ec266aa-adbc-4e05-879b-f2e84e9c420d	POST	undefined	/api/wallet/fund
 2025-03-15	06:08:57	18575b5a-427d-4f2a-be82-3893ea99dd16	POST	undefined	/api/wallet/fund
 2025-03-15	06:13:41	4dfd83e3-5a44-4246-9a6c-428b5daf9b4e	POST	undefined	/api/swapComments
+2025-03-15	06:14:55	b5e55b4a-0fd0-4f91-935f-fda13e0e80a4	GET	undefined	/api/swapPosts/country-swap
+2025-03-15	06:17:05	bfef41ff-2dbc-45a4-a8f9-ade630dee6b2	GET	undefined	/api/swapPosts/country-swap
+2025-03-15	06:17:18	7d7de796-d177-4050-aa47-dfb86efe5f8e	GET	undefined	/api/profile
+2025-03-15	06:17:32	59540783-2a6e-4a16-a477-98267d2d795c	GET	undefined	/api/swapPosts/city-swap
+2025-03-15	06:18:05	fbdff356-d674-4ca4-be1a-d9d61217151f	GET	undefined	/api/swapPosts/city-swap
+2025-03-15	06:18:41	d5e12085-a004-4b8d-8868-472c3ba429f4	GET	undefined	/api/swapPosts/city-swap
+2025-03-15	06:19:13	6dd94025-e818-4ffb-aa9d-9e4a781f031c	GET	undefined	/api/swapPosts/city-swap
+2025-03-15	06:20:35	7a7a9edf-d087-40fb-8a05-c4af2900dba0	GET	undefined	/api/swapPosts/city-swap
+2025-03-15	06:22:36	23194dc3-82b2-490b-9231-c03fc162060a	GET	undefined	/api/swapPosts/city-swap
+2025-03-15	06:23:31	0e594d63-2dcf-432e-ab25-bc35265f824e	GET	undefined	/api/swapPosts/city-swap
