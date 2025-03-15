@@ -15,9 +15,15 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: 'userId',
         as: 'wallet'
       });
+
       this.hasMany(models.Transaction, {
         foreignKey: 'userId',
         as: 'transaction'
+      });
+
+      this.hasMany(models.SwapPost, {
+        foreignKey: 'userId',
+        as: 'swapPost'
       });
     }
 

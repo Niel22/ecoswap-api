@@ -1,9 +1,9 @@
 const express = require('express');
+const router = express.Router();
 const { create, fetchSwapInYourCity, fetchSwapInYourState, fetchSwapInYourCountry, deleteSwapPost, fetchSingle } = require('../controllers/SwapPostController');
 const upload = require('../utils/uploadHelper');
 const SwapPostRequest = require('../request/SwapPostRequest');
 const makeSwapPostMiddleware = require('../middleware/makeSwapPostMiddleware');
-const router = express.Router();
 
 router.get('/city-swap', fetchSwapInYourCity);
 router.get('/state-swap', fetchSwapInYourState);

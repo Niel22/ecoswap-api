@@ -67,3 +67,8 @@
 2025-03-14	19:53:57	cbd4064e-6562-4932-9449-27f010dd537c	TypeError: Cannot read properties of undefined (reading 'map')
 2025-03-14	19:54:45	e94eafa5-1774-4592-866b-a8007e5f913d	TypeError: Cannot read properties of undefined (reading 'map')
 2025-03-14	19:55:39	847ab8a9-9ab4-435c-810b-f9c135008653	Error: route http://localhost:4000/api/swapPosts/ does not exist
+2025-03-15	05:57:47	e6263f46-baf3-4723-9b71-cfd976f61211	SequelizeDatabaseError: column SwapPost.postId does not exist
+2025-03-15	05:59:04	e2376294-5cf8-42bf-a5bf-ea243b3e8950	TypeError: Cannot read properties of undefined (reading 'name')
+2025-03-15	05:59:42	4c250b58-534a-4edb-808a-119bc5f1ba16	SequelizeEagerLoadingError: User is not associated to SwapPost!
+2025-03-15	06:00:24	7a6d2eed-32b1-4090-9985-904cdfe1a3ad	SequelizeDatabaseError: column SwapPost.userId does not exist
+2025-03-15	06:01:14	f3e02359-c849-4307-8b78-88a3e62703aa	SequelizeDatabaseError: column SwapPost.userId does not exist

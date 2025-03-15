@@ -2,34 +2,24 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('SwapPosts', {
+    await queryInterface.createTable('SwapComments', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      title: {
-        type: Sequelize.STRING
-      },
-      description: {
-        type: Sequelize.TEXT
-      },
-      swap_preference: {
-        type: Sequelize.TEXT
-      },
-      city: {
-        type: Sequelize.STRING
-      },
-      state: {
-        type: Sequelize.STRING
-      },
-      country: {
-        type: Sequelize.STRING
-      },
       userId: {
-        type: Sequelize.STRING,
-        allowNull: false
+        type: Sequelize.INTEGER
+      },
+      postId: {
+        type: Sequelize.INTEGER
+      },
+      parentId: {
+        type: Sequelize.INTEGER
+      },
+      comment: {
+        type: Sequelize.TEXT
       },
       createdAt: {
         allowNull: false,
@@ -42,6 +32,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('SwapPosts');
+    await queryInterface.dropTable('SwapComments');
   }
 };

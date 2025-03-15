@@ -10,9 +10,19 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
+      this.belongsTo(models.User,{
+        foreignKey: 'userId',
+        as: "poster"
+      });
+
       this.hasMany(models.SwapPostImage,{
         foreignKey: 'swapPostId',
         as: "swapImage"
+      });
+
+      this.hasMany(models.SwapComment, {
+        foreignKey: "postId",
+        as: "swapComments"
       });
     }
   }
@@ -22,7 +32,8 @@ module.exports = (sequelize, DataTypes) => {
     swap_preference: DataTypes.TEXT,
     city: DataTypes.STRING,
     state: DataTypes.STRING,
-    country: DataTypes.STRING
+    country: DataTypes.STRING,
+    userId: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'SwapPost',

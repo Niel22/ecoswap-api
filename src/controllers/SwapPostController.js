@@ -49,6 +49,10 @@ module.exports.fetchSwapInYourCity = async function(req, res)
         {
             model: models.SwapPostImage,
             as: "swapImage",
+        },
+        {
+            model: models.User,
+            as: "poster",
         }
     ]});
 
@@ -64,6 +68,8 @@ module.exports.fetchSwapInYourCity = async function(req, res)
             city: swap.city,
             state: swap.state,
             country: swap.country,
+            poster_name: swap.poster.name,
+            poster_picture: swap.poster.image,
             createdAt: swap.createdAt,
             swapImages: (swap.swapImage).map((image) => url(image.image)),
         }));
@@ -79,6 +85,10 @@ module.exports.fetchSwapInYourState = async function(req, res)
         {
             model: models.SwapPostImage,
             as: "swapImage",
+        },
+        {
+            model: models.User,
+            as: "poster",
         }
     ]});
 
@@ -92,6 +102,8 @@ module.exports.fetchSwapInYourState = async function(req, res)
                 city: swap.city,
                 state: swap.state,
                 country: swap.country,
+                poster_name: swap.poster.name,
+                poster_picture: swap.poster.image,
                 createdAt: swap.createdAt,
                 swapImages: (swap.swapImage).map((image) => url(image.image)),
             }));
@@ -107,6 +119,10 @@ module.exports.fetchSwapInYourCountry = async function(req, res)
         {
             model: models.SwapPostImage,
             as: "swapImage",
+        },
+        {
+            model: models.User,
+            as: "poster",
         }
     ]});
 
@@ -120,6 +136,8 @@ module.exports.fetchSwapInYourCountry = async function(req, res)
             city: swap.city,
             state: swap.state,
             country: swap.country,
+            poster_name: swap.poster.name,
+            poster_picture: swap.poster.image,
             createdAt: swap.createdAt,
             swapImages: (swap.swapImage).map((image) => url(image.image)),
         }));
@@ -135,6 +153,10 @@ module.exports.fetchSingle = async function(req, res)
         {
             model: models.SwapPostImage,
             as: "swapImage",
+        },
+        {
+            model: models.User,
+            as: "poster",
         }
     ]});
 
@@ -148,6 +170,8 @@ module.exports.fetchSingle = async function(req, res)
             city: swap.city,
             state: swap.state,
             country: swap.country,
+            poster_name: swap.poster.name,
+            poster_picture: swap.poster.image,
             createdAt: swap.createdAt,
             swapImages: (swap.swapImage).map((image) => url(image.image)),
         }, "Single Swap");

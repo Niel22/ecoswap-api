@@ -48,7 +48,6 @@ async function SwapPostRequest(req, res, next)
 
     const validated = rules.validate(data, schema);
 
-    console.log(req.files);
 
     if (!req.files || !req.files) 
     {
@@ -57,7 +56,7 @@ async function SwapPostRequest(req, res, next)
 
     if (req.files.length < 3 || req.files.length > 5) 
     {
-        req.files.forEach((image) => {
+        req.files?.forEach((image) => {
             imageRemover(`public/swaps/${image.filename}`);
         })
         return validationError(res, "Images required is Min of 3 and max of 5");
@@ -65,13 +64,13 @@ async function SwapPostRequest(req, res, next)
 
     if(validated !== true)
     {
-        req.files.forEach((image) => {
+        req.files?.forEach((image) => {
             imageRemover(`public/swaps/${image.filename}`);
         })
         return validationError(res, validated);
     }
 
-    
+    data.userId = req.AuthUser.id;
     req.SwapData = data;
     req.SwapData.userId = req.AuthUser.id;
     next();
